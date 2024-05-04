@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" type = "text/css" href = "signup-login.css">
+
+</head>
+
+<body>
+
+<form action method=id="signupform" name="" onsubmit= "return validateForm()* >
+
+<h4>Register</h4>
+
+<div class="row">
+
+<input type = "text" placeholder = "First Name" id = "firstname" name = "firstname">
+
+</div>
+
+<div id="firstname_error">Please enter your first name!</div>
+
+<div class="row">
+
+<input type = "text" placeholder = "Last Name" id = "lastname" name = "lastname">
+
+</div>
+
+<div id="lastname_error">Please enter your last name!</div>
+
+<div class="row">
+
+<input type = "email" placeholder = "Email Address" id = "email" name = "email">
+
+</div>
+
+<div id="email_error">Please enter your email address!</div>
+
+<div class="row">
+
+<input type = "tel" placeholder = "Phone Number" id="phonenumber" name = "phonenumber">
+
+</div>
+
+<div id="phonenumber_error">Please enter your phone number!</div>
+
+<div class="row">
+
+<input type = "password" placeholder = "Password" id = "password" name = "password">
+
+<span> <img src="images/eye_close.png" id="eyeicon" onclick="eyelcon()"> </span>
+
+</div>
+
+<div id="password_error">minimum characters is 8!</div>
+
+<div class="row">
+
+<input type = "password" placeholder = "Confirm Password" id = "confirmpassword" name = "confirmpassword">
+
+<span> <img src="images/eye_close.png" id="eyepass" onclick="eyePass()"> </span>
+
+</div>
+
+<div id="confirmpassword_error">Passwords must match!</div>
+
+<div id="loginlink">
+
+<a href="login.html">Already have an account? <br> Click here. <a>
+
+</div>
+
+<button id="signupbutton" type="submit">Sign Up</button>
+
+</form>
+
+<script src = "Jscode.js"> </script>
+
+</body>
+
+</html>
