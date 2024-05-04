@@ -3,10 +3,14 @@
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+body{
+    background: #e6e6e6;
+}
 nav{
     background: #ff440098;
     top: 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -24,9 +28,8 @@ nav ul.menu li a{
     text-decoration: none;
     margin-right: 40px;
     color: #fff;
-    transition: all .5s linear;
     position: relative;
-    transition: all .5s linear;
+    transition: all .3s linear;
 }
 
 nav ul.dropdown {
@@ -34,13 +37,14 @@ nav ul.dropdown {
     justify-content: center;
     align-items: center;
     opacity: 0;
+    z-index: 2;
     pointer-events: none;
     position: absolute;
     top: 50%;
     left: 0;
     background: #ff440098;
     border-radius: 10px;
-    transition: all .5s linear;
+    transition: all .3s linear;
 }
 nav ul.dropdown li a{
     color: #000;
@@ -48,6 +52,20 @@ nav ul.dropdown li a{
 nav ul.dropdown li a:hover{
     margin-right: 40px;
     color: #fff;
+}
+nav .smallscreen {
+    display: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+nav .smallscreen .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition:all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
 }
 
 nav ul.menu li:hover ul.dropdown{
@@ -117,12 +135,10 @@ header .tittle h2 .li span{
     50%{
         transform: translateY(-80px);
     }    
-    75%{
+    100%{
         transform: translateY(-119px);
     }    
-    100%{
-        transform: translateY(-160px);
-    }    
+       
 }
 header .tittle p{
     font-size: 20px;
@@ -141,15 +157,12 @@ article{
 article .desc{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 article .desc .container{
     display: flex;
     flex-direction: column;
-    box-shadow: 10px 10px 30px;
-    width: 800px;
-    height: 300px;
     border-top: 50px solid #ff440098;
-    border-radius: 20px;
     padding: 10px;
 }
 article .desc .container h1{
@@ -160,29 +173,35 @@ article .desc .container p{
 }
 article .desc .container-two{
     box-shadow: 10px 10px 30px;
-    width: 600px;
+    border-radius: 50%;
+    width: 320px;
     height: 320px;
-    border-top: 50px solid #ff440098;
-    border-radius: 20px;
+    margin-right: 100px;
+    margin-left: 30px;
 }
 article .desc .container-two img{
-    width: 600px;
+    border-radius: 50%;
+    width: 320px;
     height: 320px;
+    transition: all .3s;
+}
+article .desc .container-two img:hover{
+    transform: rotate(360deg);
+    cursor: pointer;
 }
 
 article .desc-two{
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 0 30px 0;
+    margin: 30px 0 30px 0px;
+
 }
 article .desc-two .container{
     display: flex;
     flex-direction: column;
-    box-shadow: 10px 10px 30px;
-    width: 800px;
-    height: 300px;
+    width: 320px;
+    height: 500px;
     border-top: 50px solid #ff440098;
     border-radius: 20px;
+    margin-left: 30px;
     padding: 10px;
 }
 article .desc-two .container h1{
@@ -219,7 +238,7 @@ article .products .card .description a{
     color: #000;
     position: relative;
     background: #fff;
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
     border-radius: 5px;
     padding: 5px;
 }
@@ -228,6 +247,45 @@ article .products .card .description a:hover{
     padding: 2px;
 }
 
+button.bookings{
+    background: #fff;
+    color: #000;
+    margin:20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height:50px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .3s linear;
+}
+button.bookings a{
+    font-size: 24px;
+    text-decoration: none;
+    background: #ff440098;
+    padding: 20px 10px 20px 40px;
+    color: #000;
+    transition: all .3s linear;
+}
+button.bookings img{
+    transition: all .3s linear;
+    border-radius: 30%;
+}
+button.bookings:hover{
+    width: 150px;
+    overflow: hidden;
+}
+button.bookings:hover a{
+    padding: 0;
+    transform: translateX(-2%);
+    background: none;
+}
+button.bookings:hover img{
+    transform: rotate(360deg);
+    background: #ff440098;
+    padding: 20px 0px 20px 5px ;
+}
 /* footer */
 
 
@@ -270,6 +328,10 @@ article .card{
 
 
 @media (max-width: 1500px){
+    nav ul.menu{
+        top:50px;
+        font-size: 30px;
+    }
     article .desc .container{
         width: 600px;
         height: 400px;
@@ -291,11 +353,11 @@ article .card{
     article .desc .container-two{
         box-shadow: 10px 10px 30px;
         width: 400px;
-        height: 420px;
+        height: 400px;
     }
     article .desc .container-two img{
         width: 400px;
-        height: 420px;
+        height: 400px;
     }
 }
 @media (max-width: 1090px){
@@ -310,11 +372,11 @@ article .card{
     article .desc .container-two{
         box-shadow: 10px 10px 30px;
         width: 400px;
-        height: 420px;
+        height: 400px;
     }
     article .desc .container-two img{
         width: 400px;
-        height: 420px;
+        height: 400px;
     }
 }
 @media (max-width: 980px){
@@ -329,16 +391,56 @@ article .card{
     article .desc .container-two{
         box-shadow: 10px 10px 30px;
         width: 400px;
-        height: 420px;
+        height: 400px;
     }
     article .desc .container-two img{
         width: 400px;
-        height: 420px;
+        height: 400px;
     }
 }
 @media (max-width: 884px) {
+    nav .smallscreen{
+        display: block;
+    }
+    nav .smallscreen.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    nav .smallscreen.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    nav .smallscreen.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
     nav ul.menu{
-        font-size: 20px;
+        z-index: 2;
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        background: #ff440098;
+        width: 100%;
+        text-align: center;
+        transition:all 0.3s;
+    }
+    nav ul.menu.active{
+        left: 0;
+    }
+    nav ul.menu li{
+        margin-bottom: 10px;
+    }
+    nav ul.menu li ul.dropdown li{
+        margin-bottom: 0px;
+    }
+    nav ul.dropdown {
+        width: 120px;
+        background-color: #ff4400df
+    }
+    nav ul.menu li:nth-child(3){
+        transition: all .3s;
+    }
+    nav ul.menu li:nth-child(3):hover{
+        margin-bottom: 80px;
     }
     header  .tittle h1{
         font-size: 90px;
@@ -373,8 +475,8 @@ article .card{
 }
 
 @media (max-width: 430px){
-
     nav ul.menu{
+        top:50px;
         font-size: 15px;
     }
     nav img{
@@ -382,6 +484,9 @@ article .card{
     }
     nav ul.menu li a{
         margin-right: 10px;
+    }
+    nav ul.menu li:nth-child(3):hover{
+        margin-bottom: 40px;
     }
     header  .tittle h1{
         font-size: 60px;
@@ -415,12 +520,10 @@ article .card{
         50%{
             transform: translateY(-55px);
         }    
-        75%{
+        100%{
             transform: translateY(-81px);
         }    
-        100%{
-            transform: translateY(-108px);
-        }    
+        
     }
     header .tittle p{
         font-size: 15px;
@@ -428,6 +531,7 @@ article .card{
     article .desc{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
     article .desc .container{
@@ -442,12 +546,13 @@ article .card{
     }
     article .desc .container-two{
         box-shadow: 10px 10px 30px;
-        width: 300px;
-        height: 420px;
+        width: 220px;
+        height: 220px;
+        margin-bottom: 40px;
     }
     article .desc .container-two img{
-        width: 300px;
-        height: 420px;
+        width: 220px;
+        height: 220px;
     }
     article .desc-two .container{
         width: 300px;
@@ -460,11 +565,10 @@ article .card{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     article .products .card:nth-child(1){
         margin-bottom: 15px;
-        animation:  container-img linear ;
-        animation-timeline: view();
     }
     footer .footer .contact h1 {
         font-size: 20px;

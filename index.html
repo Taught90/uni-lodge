@@ -12,24 +12,30 @@
     <nav>
         <img src="logo.jpeg" alt="" width="100px">
         <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#">Rentals</a>
+            <li class="nav-links"><a href="#">Home</a></li>
+            <li class="nav-links"><a href="#about">About</a></li>
+            <li class="nav-links"><a href="#">Rentals</a>
                 <ul class="dropdown">
-                    <li><a href="rentals.html">Rentals</a></li>
-                    <li><a href="hostel.html">Hostels</a></li>
+                    <li class="dropdown-links"><a href="rentals.html">Rentals</a></li>
+                    <li class="dropdown-links"><a href="hostel.html">Hostels</a></li>
                 </ul>
             </li>
-            <li><a href="#contact">Contact us</a>
+            <li class="nav-links"><a href="login.html">Register</a></li>
+            <li class="nav-links"><a href="#contact">Contact us</a>
             </li>
         </ul>
+        <div class="smallscreen">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
     <header>
         <img src="ai-generated-8686090_640.jpg" alt="">
         <div class="tittle">
             <h1>UNI-LODGE</h1>
             <h2>Home to your <div class="li">
-                    <span>convineince</span><span>peace</span><span>joy</span><span>safety</span><span>convineince</span>
+                    <span>Success</span><span>Growth</span><span>Connectivity</span><span>Success</span>
                 </div>
             </h2>
             <p>At UNI-LODGE, we understand the significance of finding the perfect accommodation while pursuing your
@@ -39,6 +45,9 @@
     </header>
     <article>
         <div class="desc" id="about">
+            <div class="container-two">
+                <img src="logo.jpeg" alt="">
+            </div>
             <div class="container">
                 <h1>About</h1>
                 <p>UNI-LODGE is more than just a rental company; we are your partners in creating memorable experiences
@@ -46,9 +55,7 @@
                     perfected the art of providing comfortable, convenient, and secure living spaces that foster
                     academic success and personal growth.</p>
             </div>
-            <div class="container-two">
-                <img src="logo.jpeg" alt="">
-            </div>
+            
         </div>
         <div class="desc-two">
             <div class="container">
@@ -58,23 +65,25 @@
                     than just a place to stay. Our properties are designed to inspire, support, and empower students,
                     allowing them to thrive both academically and socially.</p>
             </div>
+
         </div>
         <div class="products">
             <div class="card">
-                <img src="flat 1.jpeg" alt="" width="320px" height="520px">
+                <img src="flat 1.jpeg" alt="" width="320px" height="420px">
                 <div class="description">
                     <h3>HOSTELS</h3>
                     <a href="hostel.html">check them out</a>
                 </div>
             </div>
             <div class="card">
-                <img src="flat 2.jpeg" alt="" width="320px" height="520px">
+                <img src="flat 2.jpeg" alt="" width="320px" height="420px">
                 <div class="description">
                     <h3>RENTALS</h3>
                     <a href="rentals.html">check them out</a>
                 </div>
             </div>
         </div>
+        <button class="bookings"><a href="#">book now</a> <img src="home-button-for-interface-svgrepo-com.svg" alt="" width="30px"></button>
     </article>
     <hr>
     <footer>
@@ -105,6 +114,7 @@
         <p>Terms of Service | Privacy Policy | Cookie Policy</p>
         <p>© 2024 UNI-LODGE. All rights reserved.</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>

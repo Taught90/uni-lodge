@@ -3,12 +3,20 @@
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+body{
+    background: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 nav{
     background: #ff440098;
     top: 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
+
 nav ul.menu{
     display: flex;
     align-items: center;
@@ -23,9 +31,8 @@ nav ul.menu li a{
     text-decoration: none;
     margin-right: 40px;
     color: #fff;
-    transition: all .5s linear;
     position: relative;
-    transition: all .5s linear;
+    transition: all .3s linear;
 }
 
 nav ul.dropdown {
@@ -33,13 +40,14 @@ nav ul.dropdown {
     justify-content: center;
     align-items: center;
     opacity: 0;
+    z-index: 2;
     pointer-events: none;
     position: absolute;
     top: 50%;
     left: 0;
     background: #ff440098;
     border-radius: 10px;
-    transition: all .5s linear;
+    transition: all .3s linear;
 }
 nav ul.dropdown li a{
     color: #000;
@@ -47,6 +55,20 @@ nav ul.dropdown li a{
 nav ul.dropdown li a:hover{
     margin-right: 40px;
     color: #fff;
+}
+nav .smallscreen {
+    display: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+nav .smallscreen .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition:all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
 }
 
 nav ul.menu li:hover ul.dropdown{
@@ -57,7 +79,6 @@ nav ul.menu li:hover ul.dropdown{
 nav ul.menu li a:hover {
     color: #000;
 }
-
 
 article {
     display: flex;
@@ -129,30 +150,66 @@ footer .footer .follow-us ul {
     font-size: 30px;
 }
 @media (max-width: 884px) {
+    nav .smallscreen{
+        display: block;
+    }
+    nav .smallscreen.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    nav .smallscreen.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    nav .smallscreen.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
     nav ul.menu{
-        font-size: 20px;
+        z-index: 2;
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        background: #ff440098;
+        width: 100%;
+        text-align: center;
+        transition:all 0.3s;
+    }
+    nav ul.menu.active{
+        left: 0;
+    }
+    nav ul.dropdown {
+        width: 120px;
+        background-color: #ff4400df
+    }
+    nav ul.menu li:nth-child(3){
+        transition: all .3s;
+    }
+    nav ul.menu li:nth-child(3):hover{
+        margin-bottom: 40px;
     }
     header  .tittle h1{
         font-size: 90px;
     }
-    header .tittle h2{
-        font-size: 40px;
-    
-    }
     header p{
         font-size: 30px;
     }
-    article .card{
-        margin: 30px;
+    article .desc{
+        display: flex;
+        justify-content: space-around;
     }
-}
-@media (max-width: 820px){
+    article .desc .container{
+        margin-bottom: 40px;
+    }
     article .card{
-        margin: 20px;
+        margin: 30px auto;
     }
 }
 
 @media (max-width: 430px){
+    nav ul.menu{
+        top:50px;
+        font-size: 15px;
+    }
     nav ul.menu{
         font-size: 15px;
     }
@@ -168,9 +225,6 @@ footer .footer .follow-us ul {
     header  .tittle h2{
         font-size: 20px;
     
-    }
-    article .card{
-        margin: 15px;
     }
     header .tittle p{
         font-size: 15px;
