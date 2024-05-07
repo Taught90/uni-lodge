@@ -1,0 +1,140 @@
+#signupform {
+	display:table;
+	width:300px;
+	margin-left:500px;
+	margin-top:100px;
+	height:450px;
+	text-align:center;
+	border-radius:30px;
+	overflow:hidden;
+	background-color: #ff440098;
+}
+
+h4{
+	 background-color: #ff440098;
+	 margin:0px;
+	 padding:0px;
+	 height:30px;
+	 line-height:30px;
+	 font-size:25px;
+}
+
+input:focus{
+    background:#f0f0f0;
+}
+
+#firstname{
+	margin-top:20px;
+}
+
+.row input{
+	margin:10px;
+	border-radius:5px;
+	height:25px;
+	border:thin;
+	outline:none;
+}
+
+.row img{
+     width: 20px;
+     cursor: pointer;
+     margin:0px;
+	 position:absolute;
+	 margin-left:-35px;
+	 margin-top:13px;
+}
+
+#firstname_error,
+#lastname_error,
+#email_error,
+#phonenumber_error,
+#password_error,
+#confirmpassword_error{
+	font-size:12px;
+	font-weight:bolder;
+	margin:-5px; 
+	padding:0px;
+	color:red;
+	display:;
+	text-align:center;
+	display:none;
+}
+
+#loginlink{
+	margin-top:15px;
+}
+
+#signupbutton{
+	background-color: black;
+	color:white;
+	height:30px;
+	border-radius:5px;
+	width:170px;
+	margin-top:15px;
+	cursor:pointer;
+	border:none;
+	font-weight:bolder;
+	transition:background-color 0.5s ease-in-out;
+}
+
+#signupbutton:hover{
+	background-color: white;
+	color:black;
+}
+
+#loginform {
+	background-color:#ff440098;
+	display:table;
+	width:300px;
+	margin-left:500px;
+	margin-top:100px;
+	height:300px;
+	text-align:center;
+	border-radius:30px;
+	overflow:hidden;
+}
+
+#loginbutton{
+	background-color: black;
+	color:white;
+	cursor:pointer;
+	height:30px;
+	border-radius:5px;
+	border:none;
+	width:170px;
+	margin-top:15px;
+	margin-bottom:15px;
+	font-weight:bolder;
+}
+
+#signuplink{
+	text-align:center;
+	margin-top:15px;
+	display:block;
+}
+
+#loginbutton:hover{
+	background-color: white;
+	transition:background-color 0.5s ease-in-out;
+	color:black;
+}
+
+#emaillogin{
+	margin-top:25px;
+}
+
+#forgotpassword{
+	display:block;
+}
+
+#emailempty_error,
+#passwordempty_error{
+	font-size:12px;
+	font-weight:bolder;
+	margin:-5px; 
+	padding:0px;
+	color:red;
+	display:;
+	text-align:center;
+	display:none;
+}
