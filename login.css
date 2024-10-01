@@ -1,0 +1,155 @@
+body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e6e6e6;
+}
+.container{
+    background: #ff440098;
+    border-radius: 10px;
+    padding:60px 20px 20px 20px;
+    position: relative;
+}
+.container .img{
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: -17%;
+    right: 33%;
+    border: 20px solid #ff440098;
+    border-radius: 20%;
+}
+.container img{
+    position: absolute;
+    top: -15%;
+    right: 35%;
+    border-radius: 20%;
+    border-radius: 20%;
+}
+.container h1{
+    font-size: 35px;
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+}
+.container form input{
+    font-family: monospace;
+    margin: 0 auto 30px auto ;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.container form select{
+    font-family: monospace;
+    background-color: none;
+    height: 30px;
+    width: 400px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all .1s linear;
+}
+.container form select{
+    margin: 0 auto 30px auto ;
+}
+.container form input.button{
+    width: 150px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.container form input.button:hover{
+    background: gray;
+    color: #fff;
+}
+.container form label{
+    font-family: monospace;
+    color: #fff;
+    font-size: 30px;
+}
+.container .sign-up{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+.container .sign-up a{
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
+}
+.container .sign-up a:hover{
+    color: #000;
+}
+@media (max-width:430px) {
+    .container{
+        width: 300px;
+    }
+    .container form input{
+        width: 300px;
+        font-size: 20px;
+        margin: 0 auto 20px auto;
+    }
+    .container form label{
+        font-size: 20px;
+    }
+    .container form select{
+        width: 300px;
+        font-size: 20px;
+        margin: 0 auto 20px auto;
+    }
+    .container form select option{
+        font-size: 12px;
+    }
+    .container .img{
+        width: 80px;
+        height: 80px;
+        top: -8%;
+        right: 32%;
+    }
+    .container img{
+        top: -6%;
+        width: 100px;
+    }
+    .container .sign-up{
+        font-size: 20px;
+    }
+}
+@media (max-width:320px) {
+    .container{
+        width: 250px;
+        padding: 10px;
+    }
+    .container form input{
+        width: 250px;
+        font-size: 20px;
+        margin: 0 0 5px 0;
+    }
+    .container form label{
+        font-size: 20px;
+    }
+    .container form select{
+        width: 250px;
+        font-size: 20px;
+        margin: 0 auto 5px auto;
+    }
+    .container .img{
+        width: 28px;
+        height: 30px;
+        top: -8%;
+        right: 38%;
+    }
+    .container img{
+        width: 50px;
+        top: -6%;
+        right: 41%;
+    }
+    .container .sign-up{
+        font-size: 18px;
+    }
+}

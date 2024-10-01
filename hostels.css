@@ -9,8 +9,9 @@ body{
     flex-direction: column;
     justify-content: center;
 }
+
 nav{
-    background: #ff440098;
+    background: #cccc;
     top: 0;
     display: flex;
     align-items: center;
@@ -80,19 +81,23 @@ nav ul.menu li a:hover {
     color: #000;
 }
 
-article {
+article{
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
 }
 article .card{
-    width: 320px;
     display: flex;
     flex-direction: column;
-    margin: 30px;
+    width: 320px;
     padding: 30px 5px 30px 5px;
     background: #ff44006e;
     border-radius: 10px 10px 0 0;
+    margin:20px 0 20px 0;
+}
+article .card img{
+    width: 100%;
 }
 article .card .desc{
     display: flex;
@@ -127,28 +132,45 @@ article .card .desc a:hover{
 footer{
     display: flex;
     flex-direction: column;
+    background: #000015;
+    min-height: 25vh;
     margin-top: 30px;
     font-size: 20px;
+    color: #fff;
 }
 footer .footer{
+    background: dark;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
+footer .footer .contact{
+    margin-bottom: 10vh;
 }
 footer .footer .contact h1 {
     font-size: 30px;
 }
 footer .footer .contact ul {
+    display: flex;
     list-style: none;
     font-size: 30px;
 }
-
+footer .footer .contact ul li{
+    color: #fff;
+    margin: auto 10px;
+}
 footer .footer .follow-us h1 {
     font-size: 30px;
 }
 footer .footer .follow-us ul {
+    display: flex;
     list-style: none;
     font-size: 30px;
 }
+footer .footer .follow-us ul li{
+    margin: auto 10px;
+}
+
+
 @media (max-width: 884px) {
     nav .smallscreen{
         display: block;
@@ -187,21 +209,16 @@ footer .footer .follow-us ul {
     nav ul.menu li:nth-child(3):hover{
         margin-bottom: 40px;
     }
-    header  .tittle h1{
-        font-size: 90px;
-    }
-    header p{
-        font-size: 30px;
-    }
-    article .desc{
+    article {
         display: flex;
         justify-content: space-around;
     }
-    article .desc .container{
-        margin-bottom: 40px;
+    article .card:nth-child(odd){
+        background: gray;
+        color: #fff;
     }
-    article .card{
-        margin: 30px auto;
+    article .card:nth-child(even){
+        background: lightgreen;
     }
 }
 
@@ -224,11 +241,43 @@ footer .footer .follow-us ul {
     }
     header  .tittle h2{
         font-size: 20px;
-    
     }
     header .tittle p{
         font-size: 15px;
     }
+
+    article .card{
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+    article .card img{
+        width: 100%;
+        height: 200px;
+    }
+    article .card .desc h1{
+        font-size: 14px;
+    }
+    article .card .desc p{
+        display: flex;
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    article .card .desc a{
+        font-size: 10px;
+        text-decoration: none;
+        color: #000;
+        background: #fff;
+        transition: all 0.5s linear;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    article .card .desc a:hover{
+        color: #ff44006e;
+        padding: 2px;
+    }
+
     footer .footer .contact h1 {
         font-size: 20px;
     }
@@ -241,7 +290,7 @@ footer .footer .follow-us ul {
     }
     
     footer .footer .follow-us h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
     footer .footer .follow-us ul img{
         width: 20px;
@@ -249,5 +298,10 @@ footer .footer .follow-us ul {
     footer p {
         list-style: none;
         font-size: 15px;
+    }
+}
+@media (max-width: 320px) {
+    article .card{
+        width: 75vw;
     }
 }

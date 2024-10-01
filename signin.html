@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img"></div>
+        <img src="logo.jpeg" alt="logo" width="150px">
+        <h1>Sign up</h1>
+        <form class="signin" action="POST">
+            <label id="username-label">username</label>
+            <input type="text" name="username" id="signin-username">
+            <label id="email-label">E-mail</label>
+            <input type="email" name="email" id="signin-email">
+            <label id="password-label">Password</label>
+            <input type="password" name="password" id="signin-password">
+            <label id="confirm-password-label">Confirm password</label>
+            <input type="password" name="confirm-password" id="signin-confirm-password">
+            <input type="submit" name="button" value="Sign up" id="button" class="button">
+        </form>
+        <div class="sign-up">
+            <p>Already have an account</p>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

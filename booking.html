@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img"></div>
+        <img src="logo.jpeg" alt="logo" width="150px">
+        <h1>Booking</h1>
+        <form class="signin" action="POST">
+            <label id="username-label">username</label>
+            <input type="text" name="username" id="signin-username">
+            <label id="email-label">E-mail</label>
+            <input type="email" name="email" id="signin-email">
+            <label id="school-label">School</label>
+            <input type="text" name="school" id="school">
+            <label id="level-label">Degree</label>
+            <select name="level" id="level">
+                <option value="masters">Masters</option>
+                <option value="bachelors">Bachelors</option>
+                <option value="diploma">Diploma</option>
+            </select>
+            <label id="house-label">Rental type</label>
+            <select name="house_type" id="house_type">
+                <option value="hostel">Hostel</option>
+                <option value="rentals">Rentals</option>
+            </select>
+            <input type="submit" name="button" value="Book" id="button" class="button">
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

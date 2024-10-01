@@ -6,8 +6,9 @@
 body{
     background: #e6e6e6;
 }
+
 nav{
-    background: #ff440098;
+    background: #cccc;
     top: 0;
     display: flex;
     align-items: center;
@@ -76,6 +77,38 @@ nav ul.menu li:hover ul.dropdown{
 nav ul.menu li a:hover {
     color: #000;
 }
+nav button.bookings{
+    width: 140px;
+    height: 35px;
+}
+nav button.bookings a{
+    font-size: 14px;
+    padding: 20px 10px 20px 40px;
+    color: #fff;
+    
+}
+nav button.bookings img{
+    width: 20px;
+    transition: all .3s linear;
+    border-radius: 30%;
+}
+
+nav button.bookings:hover{
+    cursor: pointer;
+    width: 130px;
+    overflow: hidden;
+}
+nav button.bookings:hover a{
+    padding: 0 15px;
+    transform: translateX(-2%);
+    color: #000;
+    background: none;
+}
+nav button.bookings:hover img{
+    transform: rotate(360deg);
+    background: #ff440098;
+    padding: 20px 5px 20px 5px ;
+}
 
 /*header*/
 
@@ -95,7 +128,7 @@ header img{
 header .tittle{
     min-height: 100vh;
     display: flex;
-    background: linear-gradient(45deg,#ff440098,#fff );
+
     flex-direction: column;
     justify-content: center;
 }
@@ -163,6 +196,7 @@ article .desc .container{
     display: flex;
     flex-direction: column;
     border-top: 50px solid #ff440098;
+    border-radius: 20px;
     padding: 10px;
 }
 article .desc .container h1{
@@ -172,10 +206,14 @@ article .desc .container p{
     font-size: 24px;
 }
 article .desc .container-two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #959595;
     box-shadow: 10px 10px 30px;
     border-radius: 50%;
-    width: 320px;
-    height: 320px;
+    width: 880px;
+    height: 340px;
     margin-right: 100px;
     margin-left: 30px;
 }
@@ -191,6 +229,8 @@ article .desc .container-two img:hover{
 }
 
 article .desc-two{
+    display: flex;
+    justify-content: space-between;
     margin: 30px 0 30px 0px;
 
 }
@@ -210,6 +250,33 @@ article .desc-two .container h1{
 article .desc-two .container p{
     font-size: 24px;
 }
+article .desc-two .svg{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+article .desc-two .svg .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 50px;
+}
+article .desc-two .svg .item img{
+    padding: 10px;
+    background: #959595;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: all .3s;
+}
+article .desc-two .svg .item img:hover{
+    cursor: pointer;
+    background: #fff;
+    transform: rotate(360deg);
+}
+article .desc-two .svg label{
+    font-size: 14px;
+}
 
 
 article .products{
@@ -218,19 +285,16 @@ article .products{
 }
 article .products .card{
     padding: 20px 0 10px 0;
-    background: #ff440098;
+    background: #cccc;
     border-radius: 10px 10px 0 0;
-
 }
 article .products .card .description {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 article .products .card .description h3{
     font-size: 40px;
-    text-align: start;
 }
 article .products .card .description a{
     font-size: 24px;
@@ -273,7 +337,7 @@ button.bookings img{
     border-radius: 30%;
 }
 button.bookings:hover{
-    width: 150px;
+    width: 160px;
     overflow: hidden;
 }
 button.bookings:hover a{
@@ -284,8 +348,9 @@ button.bookings:hover a{
 button.bookings:hover img{
     transform: rotate(360deg);
     background: #ff440098;
-    padding: 20px 0px 20px 5px ;
+    padding: 20px 5px 20px 5px ;
 }
+
 /* footer */
 
 
@@ -293,27 +358,42 @@ button.bookings:hover img{
 footer{
     display: flex;
     flex-direction: column;
+    background: #000015;
+    min-height: 25vh;
     margin-top: 30px;
     font-size: 20px;
+    color: #fff;
 }
 footer .footer{
+    background: dark;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
+footer .footer .contact{
+    margin-bottom: 10vh;
 }
 footer .footer .contact h1 {
     font-size: 30px;
 }
 footer .footer .contact ul {
+    display: flex;
     list-style: none;
     font-size: 30px;
 }
-
+footer .footer .contact ul li{
+    color: #fff;
+    margin: auto 10px;
+}
 footer .footer .follow-us h1 {
     font-size: 30px;
 }
 footer .footer .follow-us ul {
+    display: flex;
     list-style: none;
     font-size: 30px;
+}
+footer .footer .follow-us ul li{
+    margin: auto 10px;
 }
 
 /* HOSTELS */
@@ -327,18 +407,34 @@ article .card{
 }
 
 
-@media (max-width: 1500px){
+@media (max-width: 1590px){
     nav ul.menu{
         top:50px;
         font-size: 30px;
+    }
+    article .desc-two{
+        display: flex;
+        flex-direction: column;
     }
     article .desc .container{
         width: 600px;
         height: 400px;
     }
     article .desc-two .container{
-        width: 600px;
+        width: 90vw;
         height: 400px;
+    }
+    article .desc-two .svg{
+        width: 100vw;
+    }
+    article .desc-two .svg .item img{
+        width: 80px;
+        height: 80px;
+        transition: all .3s;
+    }
+    article .desc-two .svg .item label{
+        font-size: 10px;
+        text-align: center;
     }
 }
 @media (max-width: 1300px){
@@ -366,8 +462,8 @@ article .card{
         height: 400px;
     }
     article .desc-two .container{
-        width: 500px;
-        height: 400px;
+        width: 90vw;
+        height: 300px;
     }
     article .desc .container-two{
         box-shadow: 10px 10px 30px;
@@ -378,6 +474,10 @@ article .card{
         width: 400px;
         height: 400px;
     }
+    article .desc-two{
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media (max-width: 980px){
     article .desc .container{
@@ -385,13 +485,14 @@ article .card{
         height: 500px;
     }
     article .desc-two .container{
-        width: 400px;
-        height: 500px;
+        width: 90vw;
+        height: 300px;
     }
     article .desc .container-two{
         box-shadow: 10px 10px 30px;
         width: 400px;
         height: 400px;
+        margin-bottom: 20px;
     }
     article .desc .container-two img{
         width: 400px;
@@ -476,11 +577,11 @@ article .card{
 
 @media (max-width: 430px){
     nav ul.menu{
-        top:50px;
+        top:70px;
         font-size: 15px;
     }
     nav img{
-        width: 50px;
+        width: 70px;
     }
     nav ul.menu li a{
         margin-right: 10px;
@@ -488,6 +589,37 @@ article .card{
     nav ul.menu li:nth-child(3):hover{
         margin-bottom: 40px;
     }
+    nav button.bookings{
+        width: 140px;
+        height: 30px;
+    }
+    nav button.bookings a{
+        font-size: 14px;
+        padding: 20px 10px 20px 40px;
+        
+    }
+    nav button.bookings img{
+        width: 20px;
+        transition: all .3s linear;
+        border-radius: 30%;
+    }
+    
+    nav button.bookings:hover{
+        cursor: pointer;
+        width: 130px;
+        overflow: hidden;
+    }
+    nav button.bookings:hover a{
+        padding: 0 15px;
+        transform: translateX(-2%);
+        background: none;
+    }
+    nav button.bookings:hover img{
+        transform: rotate(360deg);
+        background: #ff440098;
+        padding: 20px 5px 20px 5px ;
+    }
+
     header  .tittle h1{
         font-size: 60px;
     }
@@ -531,15 +663,17 @@ article .card{
     article .desc{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
     article .desc .container{
         margin-bottom: 40px;
     }
     article .desc .container{
-        width: 300px;
-        height: 400px;
+        width: 90vw;
+        height: 370px;
+        background: gray;
+        border-top: 50px solid #fff;
+        color: #fff;
     }
     article .desc .container p{
         font-size: 20px;
@@ -554,21 +688,60 @@ article .card{
         width: 220px;
         height: 220px;
     }
+    article .desc-two {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+    article .desc-two .svg {
+        display: flex;
+        width: 100vw;
+        justify-content: space-around;
+    }
+    article .desc-two .svg .item img{
+        width: 40px;
+        height: 40px;
+        transition: all .3s;
+    }
+    article .desc-two .svg .item label{
+        font-size: 10px;
+        text-align: center;
+    }
     article .desc-two .container{
-        width: 300px;
-        height: 400px;
+        width: 90vw;
+        height: 370px;
+        margin: 1px 0;
+        border-top: 50px solid #fff;
+        background: lightgreen;
+        color: #fff;
     }
     article .desc-two .container p{
         font-size: 20px;
     }
-    article .products{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    article .products .card img{
+        width: 150px;
+        height: 180px; 
     }
-    article .products .card:nth-child(1){
-        margin-bottom: 15px;
+    article .products .card .description h3{
+        font-size: 20px;
+    }
+    article .products .card .description a{
+        font-size: 10px;
+    }
+
+    button.bookings{
+        width: 180px;
+        height: 40px;
+    }
+    button.bookings a{
+        font-size: 20px;
+        padding: 20px 10px 20px 40px;
+        
+    }
+    button.bookings img{
+        transition: all .3s linear;
+        border-radius: 30%;
     }
     footer .footer .contact h1 {
         font-size: 20px;
@@ -582,7 +755,7 @@ article .card{
     }
     
     footer .footer .follow-us h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
     footer .footer .follow-us ul img{
         width: 20px;
@@ -590,5 +763,20 @@ article .card{
     footer p {
         list-style: none;
         font-size: 15px;
+    }
+}
+
+@media (max-width: 380px){
+    header  .tittle h1{
+        font-size: 50px;
+    }
+    article .desc-two .container p{
+        font-size: 18px;
+    }
+    article .desc .container p{
+        font-size: 18px;
+    }
+    article .desc-two .svg .item{
+        width: 45px;
     }
 }
