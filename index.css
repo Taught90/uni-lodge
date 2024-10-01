@@ -575,7 +575,7 @@ article .card{
     }
 }
 
-@media (max-width: 430px){
+@media (max-width: 600px){
     nav ul.menu{
         top:70px;
         font-size: 15px;
